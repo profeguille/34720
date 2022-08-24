@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import Bienvenida from './components/Bienvenida';
+import Footer from './components/Footer';
+import NavBar from './components/NavBar';
+import Producto from './components/Producto';
 
 function App() {
+  let producto1 = { id: 100, name: 'zapato nike', price: 100 };
+  let producto2 = { id: 101, name: 'zapato adidas', price: 150 };
+  let producto3 = { id: 102, name: 'vestido lola', price: 300 };
+
+  function consoleHolaMundo() {
+    console.log('hola mundo');
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NavBar />
+
+      <Bienvenida />
+
+      <Producto item={producto1} color={'coral'} consoleHolaMundo={consoleHolaMundo} />
+
+      {/*       <Producto item={producto2} color={'blue'} consoleHolaMundo={consoleHolaMundo} />
+       */}
+      {/*       <Producto item={producto3} color={'blue'} consoleHolaMundo={consoleHolaMundo} />
+       */}
+      <Footer />
     </div>
   );
 }
