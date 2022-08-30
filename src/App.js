@@ -3,6 +3,7 @@ import Bienvenida from './components/Bienvenida';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
 import Producto from './components/Producto';
+import FetchContainer from './test/FetchContainer';
 import Promesas from './test/Promesas';
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
 
   return (
     <div>
-      <Promesas />
+      <FetchContainer />
+      {/* <Promesas /> */}
       {/* <NavBar />
 
       <Bienvenida />
