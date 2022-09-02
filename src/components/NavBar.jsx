@@ -1,19 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function NavBar() {
   return (
     <div>
-      <ul>
-        <li>
-          <a href="">link 1</a>
-        </li>
-        <li>
-          <a href="">link 2</a>
-        </li>
-        <li>
-          <a href="">link 3</a>
-        </li>
-      </ul>
+      <Link to="/">HOME</Link>
+      <br />
+      <Link to="/category/vestidos">Vestidos</Link>
+      <br />
+      <Link to="/category/deportivo">Deportivo</Link>
+      <br />
+      <Link to="/product/100">Producto Destacado</Link>
+      <br />
     </div>
   );
 }

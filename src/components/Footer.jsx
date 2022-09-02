@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
 export default function Footer() {
   return (
     <div>
-      <div>footer</div>
-      <div>footer</div>
-      <div>footer</div>
-      <div>footer</div>
+      FOOTER
+      <ul>
+        <li>
+          <a href="">link 1</a>
+        </li>
+      </ul>
     </div>
   );
 }

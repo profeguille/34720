@@ -1,34 +1,25 @@
 import './App.css';
-import Bienvenida from './components/Bienvenida';
-import Footer from './components/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
-import Producto from './components/Producto';
-import FetchArrayContainer from './test/FetchArrayContainer';
-import FetchContainer from './test/FetchContainer';
-import Promesas from './test/Promesas';
+import Footer from './components/Footer';
+import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 function App() {
-  /* let producto1 = { id: 100, name: 'zapato nike', price: 100 };
-  let producto2 = { id: 101, name: 'zapato adidas', price: 150 };
-  let producto3 = { id: 102, name: 'vestido lola', price: 300 };
-
-  function consoleHolaMundo() {
-    console.log('hola mundo');
-  } */
-
   return (
-    <div>
-      {/* <FetchContainer /> */}
-      <FetchArrayContainer />
-      {/* <Promesas /> */}
-      {/* <NavBar />
+    <>
+      <BrowserRouter>
+        <NavBar />
 
-      <Bienvenida />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:idcategory" element={<ItemListContainer />} />
+          <Route path="/product/:idproduct" element={<ItemDetailContainer />} />
+        </Routes>
 
-      <Producto item={producto1} color={'coral'} consoleHolaMundo={consoleHolaMundo} />
-
-      <Footer /> */}
-    </div>
+        <Footer />
+      </BrowserRouter>
+    </>
   );
 }
 
