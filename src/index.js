@@ -1,10 +1,20 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import { initializeApp } from 'firebase/app';
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+initializeApp({
+  apiKey: 'AIzaSyDM-iRKQATqIQsis45nTysGizJV4Aw71fk',
+  authDomain: 'camada-34720.firebaseapp.com',
+  projectId: 'camada-34720',
+  storageBucket: 'camada-34720.appspot.com',
+  messagingSenderId: '505992511746',
+  appId: '1:505992511746:web:8bf86050ce0ec0631ec21b',
+});
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
     {/* <React.StrictMode> */}
